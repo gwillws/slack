@@ -135,8 +135,8 @@ body {
   font-weight: 900;
   line-height: 53px;
   cursor: pointer;
-  text-align: left
-
+  text-align: left;
+  float: right;
 }
 
 /* line 29, ../tests/sass/components/_header.scss */
@@ -342,14 +342,22 @@ body {
 }
 
 /* line 38, ../tests/sass/components/_user-menu.scss */
+.connection_container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 .connection_icon {
   width: 12px;
   height: 12px;
+  margin-left: 10px;
 }
 
 /* line 43, ../tests/sass/components/_user-menu.scss */
 .connection_status {
   color: #ab9ba9;
+  margin-left: 5px;
 }
 
 /* line 1, ../tests/sass/components/_input-box.scss */
@@ -368,7 +376,7 @@ body {
   /*padding: 9px 5px 9px 8px;*/
   margin: 10px 25px 55px 25px;
   margin-bottom: auto;
-  width: 100%;
+  width: auto;
 }
 
 /* line 6, ../tests/sass/components/_input-box.scss */

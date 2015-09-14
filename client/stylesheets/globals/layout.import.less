@@ -2,8 +2,8 @@
 
 // iPhone6 for illustrative purposes only
 // Remove when deploying your app
-/*@media screen and (min-width: 376) {
-  body {
+@media screen and (max-width: 525px) {
+/*  body {
     overflow: hidden;
 
     &:after {
@@ -23,9 +23,102 @@
       max-height: 667px;
       margin: 0 auto;
     }
+  }*/
+
+  .team-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    width: 100%;
+    height: 53px;
+    line-height: 22px;
+    font-weight: 900;
+    padding: 0 1rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
+    border-bottom: 2px solid #372c36;
+    float: left;
+    cursor: pointer;
+
+    span {
+      height: 50%;
+    }
   }
-}*/
+
+  .channel-menu_name {
+    height: 50%;
+    display: block;
+    color: #555459;
+    font-size: 0.8rem;
+    font-weight: 900;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
 // End of iPhone
+
+
+// Start media 425px
+@media screen and (max-width: 425px) {
+  .channel_list {
+    list-style-type: none;
+    font-size: 1em;
+    color: #ab9ba9;
+    width: 100%;
+  }
+
+  .unread {
+    color: #ffffff;
+    background: #eb4d5c;
+    border-radius: 10px;
+    padding: 5px 9px;
+    font-size: .9rem;
+    line-height: 14px;
+    font-weight: 700;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-left: -22px;
+    margin-top: 3px;
+  }
+
+  .user-menu_profile-pic {
+    display: inline-block;
+    float: left;
+    -moz-border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    width: 26px;
+    height: 26px;
+    background-image: url("http://i.imgur.com/LikUNLc.png");
+    background-size: cover;
+    margin-right: 8px;
+  }
+
+  .connection_container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -5px;
+  }
+
+  .user-menu_username {
+    display: block;
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.5rem;
+    margin-top: .2rem;
+  }
+}
+// End media 425px
+
 
 body {
   background: @color-empty;
