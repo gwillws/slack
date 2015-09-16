@@ -1,3 +1,6 @@
+// Font awesome
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
 @import 'util/reset.import.less';
 
 // Mixins & Utilities
@@ -184,7 +187,8 @@ body {
   width: 220px;
 
   .font-s2;
-  .raleway-regular;
+  .raleway-light;
+  font-weight: 200;
 
   /*color: #ab9ba9;*/
   color: #fff;
@@ -212,6 +216,7 @@ body {
   font-size: .8rem;
   line-height: 1.25rem;
   /*margin: 1rem 1rem .1rem;*/
+  margin-left: 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #ab9ba9;
@@ -268,10 +273,10 @@ body {
 /* line 51, ../tests/sass/components/_listings.scss */
 .channel.active {
   /*background: rgba(255, 255, 255, 0.31) none repeat scroll 0% 0%;*/
-  background: -webkit-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1));
+  background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1));
+  background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1));
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,255,255,1));
   color: #2f2847;
 }
 
@@ -413,6 +418,7 @@ body {
 
 /* line 1, ../tests/sass/components/_input-box.scss */
 .input-box {
+  display: inline-block;
   height: 44px;
   line-height: 1.2rem;
   border: 2px solid #e0e0e0;
@@ -430,8 +436,16 @@ body {
   width: auto;
 }
 
+.input-box .fa-paper-plane {
+  position: relative;
+  float: right;
+  top: 12px;
+  right: 12px;
+}
+
 /* line 6, ../tests/sass/components/_input-box.scss */
 .input-box_text {
   margin-top: -10px;
+  width: 95%;
 }
 
