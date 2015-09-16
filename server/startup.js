@@ -3,5 +3,13 @@ Meteor.startup(function() {
     Channels.insert({
       channelName: 'slack',
     });
+
+		Channels.insert({
+			channelName: 'general'
+		});
+
+		Channels.insert({
+			channelName: 'random'
+		})
   }
 })

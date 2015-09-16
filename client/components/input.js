@@ -4,7 +4,10 @@ var input = function(e) {
     var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
     if (charCode == 13 || charCode == 1) {
       e.stopPropagation();
-      Meteor.call('newMessage', {text: $('.input-box_text').val()});
+      Meteor.call('newMessage', {
+        text: $('.input-box_text').val(),
+        chId: Session.get('selectedChannel')
+      });
       $('.input-box_text').val("");
       return false;
     }    

@@ -1,5 +1,5 @@
-Meteor.publish('messages', function () {
-  return Messages.find();
+Meteor.publish('messages', function (channelId) {
+  return Messages.find({chId: channelId});
 });
 
 Meteor.publish('channels', function () {
