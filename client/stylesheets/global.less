@@ -124,9 +124,8 @@ body {
 .header {
   text-align: left;
   height: 10%;
-  min-height: 50px;
-  max-height: 50px;
-  /*max-height: @header-height;*/
+  min-height: @header-height;
+  max-height: @header-height;
   width: 220px;
 }
 
@@ -141,24 +140,29 @@ body {
   bottom: 0;
 
   height: 10%;
-  min-height: 50px;
-  max-height: 50px;
+  min-height: @footer-height;
+  max-height: @footer-height;
   width: 220px;
 }
 
 /* line 1, ../tests/sass/components/_header.scss */
 .team-menu {
-  position: relative;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+
   height: 100%;
-  line-height: 40px;
-  font-weight: 900;
-  padding: 0 1rem;
-  color: #ffffff;
+  width: 100%;
   background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
   border-bottom: 2px solid #372c36;
-  float: left;
-  cursor: pointer;
+
+  & span {
+    flex: 1;
+    margin-left: 15px;
+    .font-m2;
+    .raleway-medium;
+  }
 }
 
 /* line 19, ../tests/sass/components/_header.scss */
@@ -203,6 +207,7 @@ body {
 .message-history {
   overflow-y: auto;
   overflow-x: hidden;
+  margin-top: 48px;
   height: auto;
   padding: 0 18px 1rem 1.5rem;
 }
@@ -392,7 +397,8 @@ body {
   font-weight: 900;
   line-height: 1.5rem;
   margin-top: .2rem;
-  max-width: 120px;
+  max-width: 220px;
+  text-align: left;
 }
 
 /* line 38, ../tests/sass/components/_user-menu.scss */
@@ -405,7 +411,6 @@ body {
 .connection_icon {
   width: 12px;
   height: 12px;
-  margin-left: 10px;
 }
 
 /* line 43, ../tests/sass/components/_user-menu.scss */

@@ -7,6 +7,7 @@ Template.channel.onCreated(function() {
   		var defaultChannel = Channels.findOne({channelName: 'slack'});
 
 			Session.set('selectedChannel', defaultChannel._id);
+      Session.set('selectedChName', defaultChannel.channelName);
   	}
   });
 });
@@ -27,5 +28,6 @@ Template.channel.helpers({
 Template.channel.events({
 	'click .channel': function(e) {
 		Session.set('selectedChannel', this._id);
+    Session.set('selectedChName', this.channelName);
 	}
 });

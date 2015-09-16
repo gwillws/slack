@@ -53,8 +53,6 @@ Meteor.startup(function () {
 });
 
 Template.appBody.onRendered(function() {
-  this.subscribe('allUsernames');
-
   this.find("#content-container")._uihooks = {
     insertElement: function(node, next) {
       // short-circuit and just do it right away
