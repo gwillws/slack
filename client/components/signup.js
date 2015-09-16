@@ -1,6 +1,7 @@
 Template.signup.events({
   'click .signup-back-button': function() {
-    Router.go('login');
+    event.preventDefault();
+    Router.go('/login');
   },
   'click .signup-button': function(event) {
     event.preventDefault();
@@ -14,6 +15,6 @@ Template.signup.events({
       password: password,
     });
 
-    Router.go('home');
+    Router.go('/');
   }
 })

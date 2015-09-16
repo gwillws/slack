@@ -7,11 +7,12 @@ Template.login.events({
       if (err) {
         console.log(err.reason);
       } else {
-        Router.go('home');
+        Router.go('/');
       }
     });
   },
   'click .signup-button': function(event) {
+    event.preventDefault();
     Router.go('/signup');
   },
   'click .facebook-login-button': function(event) {
@@ -20,7 +21,7 @@ Template.login.events({
       if (err) {
         console.log(err.reason);
       } else {
-        Router.go('home');
+        Router.go('/');
       }
     });
   },
