@@ -12,16 +12,19 @@ Template.registerHelper("timestampToTime", function (timestamp) {
 
 Template.registerHelper("usernameFromId", function (userId) {
 	var user = Meteor.users.findOne({_id: userId});
+	
 	if (typeof user === "undefined") {
 		return "Anonymous";
 	}
+
+	if (typeof user.username !== "undefined") {
+		return user.username;
+	}
 	
-	// if (typeof user.services.facebook !== "undefined") {
-	// 	return user.services.facebook.username;
-	// }
-	if (user.profile.name) {
-		console.log(user.profile.name);
-		return user.profile.name;
+	if (user.services) {
+		if (typeof user.services.facebook !== "undefined") {
+			return user.services.facebook.name;
+		}
 	}
 
 	return user.username;

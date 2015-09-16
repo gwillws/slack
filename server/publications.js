@@ -10,7 +10,7 @@ Meteor.publish("allUsernames", function () {
   return Meteor.users.find({}, {fields: {
     "username": 1,
     "services.facebook.id": 1,
-    "services.facebook.username": 1,
+    "services.facebook.name": 1,
 
     "profile.firstName": 1,
     "profile.lastName": 1,
