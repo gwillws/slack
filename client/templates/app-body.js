@@ -158,10 +158,10 @@ Template.appBody.events({
     event.preventDefault();
   },
 
-  'click #menu a': function(event) {
-    nextInitiator = 'menu'
-    Session.set(MENU_KEY, false);
-  },
+  // 'click #menu a': function(event) {
+  //   nextInitiator = 'menu'
+  //   Session.set(MENU_KEY, false);
+  // },
   
   'click .js-notification-action': function() {
     if (_.isFunction(this.callback)) {
