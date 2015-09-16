@@ -1,13 +1,15 @@
 <template name="channel">
-  <li class="channel active">
-    <div class="channel_name">
-      <p>
-        <span class="prefix">#</span>
-        slack
-      </p>
-      <span class="unread">
-        0
-      </span>
-    </div>
-  </li>
+  {{#each channels}}
+    <li class="channel active">
+      <div class="channel_name">
+        <p>
+          <span class="prefix">#</span>
+          {{channelName}}
+        </p>
+        <span class="unread">
+          0
+        </span>
+      </div>
+    </li>
+  {{/each}}
 </template>
