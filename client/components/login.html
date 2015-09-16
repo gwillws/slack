@@ -1,23 +1,32 @@
 <template name="login">
+  
 
-  <form class="login-form">
-
-    <div id="login-email-and-label">
-      <input id="login-email" type="email" placeholder="Email Address">
+  <div class="login-page">
+    <div class="login-title">
+      <p>scotch</p>
     </div>
 
-    <div id="login-password-and-label">
-      <input id="login-password" type="password" placeholder="Password">
-    </div>
+<!--     <div id="menu-bg-color">
+      <div id="menu-bg-image"></div>
+    </div> -->
 
-    <button id="login-button">Login</button>
-    <p>Or</p>
-    <button id="signup-button">Sign Up as new user</button>
+    <form class="login-form">
+      <div>
+        <input class="login-input login-email" type="email" placeholder="Username/Email">
+      </div>
 
-    <p>Or</p>
-    <div id="facebook-login-form">
-      <button id="facebook-login-button">Login with facebook</button>
-    </div>
-      
-  </form>
+      <div>
+        <input class="login-input login-password" type="password" placeholder="Password">
+      </div>
+
+      <button class="login-button">SIGN IN</button>
+
+      <button class="signup-button">SIGN UP</button>
+      <p>or</p>
+      <button class="facebook-login-button">Login with facebook</button>
+
+    </form>
+  </div>
+
+
 </template>
