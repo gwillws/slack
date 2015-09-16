@@ -1,32 +1,20 @@
 <template name="login">
   
-
-  <div class="login-page">
-    <div class="login-title">
-      <p>scotch</p>
+  <form class="login-form">
+    <div>
+      <input class="login-input login-email" type="email" placeholder="Username/Email">
     </div>
 
-<!--     <div id="menu-bg-color">
-      <div id="menu-bg-image"></div>
-    </div> -->
+    <div>
+      <input class="login-input login-password" type="password" placeholder="Password">
+    </div>
 
-    <form class="login-form">
-      <div>
-        <input class="login-input login-email" type="email" placeholder="Username/Email">
-      </div>
+    <button class="login-button">SIGN IN</button>
 
-      <div>
-        <input class="login-input login-password" type="password" placeholder="Password">
-      </div>
+    <button class="signup-button">SIGN UP</button>
+    <p>or</p>
+    <button class="facebook-login-button">Login with facebook</button>
 
-      <button class="login-button">SIGN IN</button>
-
-      <button class="signup-button">SIGN UP</button>
-      <p>or</p>
-      <button class="facebook-login-button">Login with facebook</button>
-
-    </form>
-  </div>
-
+  </form>
 
 </template>
