@@ -201,7 +201,7 @@ body {
 .message-history {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 85%;
+  height: auto;
   padding: 0 18px 1rem 1.5rem;
 }
 
@@ -418,8 +418,15 @@ body {
 
 /* line 1, ../tests/sass/components/_input-box.scss */
 .input-box {
-  display: inline-block;
+  flex: 1;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+
+  padding: 0;
   height: 44px;
+  max-height: 44px;
   line-height: 1.2rem;
   border: 2px solid #e0e0e0;
   -moz-border-radius: 0.2rem;
@@ -431,21 +438,21 @@ body {
   background-clip: padding-box;
   color: #3d3c40;
   /*padding: 9px 5px 9px 8px;*/
-  margin: 10px 25px 55px 25px;
-  margin-bottom: auto;
+  margin: 0px 25px 15px 25px;
   width: auto;
+
+  bottom: 0;
 }
 
 .input-box .fa-paper-plane {
   position: relative;
-  float: right;
-  top: 12px;
   right: 12px;
+  top: 12px;
 }
 
 /* line 6, ../tests/sass/components/_input-box.scss */
 .input-box_text {
-  margin-top: -10px;
-  width: 95%;
+  width: 90%;
+  padding: 0;
 }
 
