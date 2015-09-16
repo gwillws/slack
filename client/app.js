@@ -15,8 +15,14 @@ Template.registerHelper("usernameFromId", function (userId) {
 	if (typeof user === "undefined") {
 		return "Anonymous";
 	}
-	if (typeof user.services.github !== "undefined") {
-		return user.services.github.username;
+	
+	// if (typeof user.services.facebook !== "undefined") {
+	// 	return user.services.facebook.username;
+	// }
+	if (user.profile.name) {
+		console.log(user.profile.name);
+		return user.profile.name;
 	}
+
 	return user.username;
 });
