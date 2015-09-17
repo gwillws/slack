@@ -1,9 +1,9 @@
 App.info({
-  name: 'Local Market',
-  description: 'A recipe sharing app made in Meteor.',
-  author: 'Percolate Studio Team',
-  email: 'us@percolatestudio.com',
-  website: 'http://percolatestudio.com',
+  name: 'Chatter',
+  description: 'A slack clone app made in Meteor.',
+  author: 'GWS',
+  email: 'info.gwillws@gmail.com',
+  website: 'http://areyoureadyforthis.com',
   version: '0.0.1'
 });
 

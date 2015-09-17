@@ -4,7 +4,7 @@ Template.channel.onCreated(function() {
   	var channelSub = self.subscribe('channels');
 
   	if (channelSub.ready()) {
-  		var defaultChannel = Channels.findOne({channelName: 'slack'});
+  		var defaultChannel = Channels.findOne({channelName: 'chatter'});
 
 			Session.set('selectedChannel', defaultChannel._id);
       Session.set('selectedChName', defaultChannel.channelName);
