@@ -1,3 +1,38 @@
+// Font awesome
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+@import 'util/reset.import.less';
+
+// Mixins & Utilities
+@import 'util/helpers.import.less';
+@import 'util/lesshat.import.less';
+@import 'util/fontface.import.less';
+@import 'util/text.import.less';
+@import 'util/typography.import.less';
+@import 'util/variables.import.less';
+
+// Global namespace
+@import 'globals/base.import.less';
+@import 'globals/button.import.less';
+@import 'globals/form.import.less';
+@import 'globals/icon.import.less';
+@import 'globals/layout.import.less';
+@import 'globals/link.import.less';
+@import 'globals/menu.import.less';
+@import 'globals/nav.import.less';
+@import 'globals/user.import.less';
+
+
+// Global Templates
+@import 'globals/background.import.less';
+@import 'globals/list-activities.import.less';
+@import 'globals/list-recipes.import.less';
+@import 'globals/list-title.import.less';
+@import 'globals/message.import.less';
+@import 'globals/notification.import.less';
+@import 'globals/overlay.import.less';
+@import 'globals/welcome.import.less';
+
 /* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -87,13 +122,11 @@ body {
 
 /* line 23, ../tests/sass/_layout.scss */
 .header {
-  height: 5%;
-  /*position: fixed;*/
-  /*top: 0;
-  left: 0;*/
   text-align: left;
-  height: 53px;
-  width: 100%;
+  height: 10%;
+  min-height: @header-height;
+  max-height: @header-height;
+  width: 220px;
 }
 
 /* line 31, ../tests/sass/_layout.scss */
@@ -104,25 +137,32 @@ body {
 /* line 35, ../tests/sass/_layout.scss */
 .footer {
   position: absolute;
-  left: 0;
   bottom: 0;
-  height: 64px;
-  width: 100%;
+
+  height: 10%;
+  min-height: @footer-height;
+  max-height: @footer-height;
+  width: 220px;
 }
 
 /* line 1, ../tests/sass/components/_header.scss */
 .team-menu {
-  position: relative;
+  display: flex;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+
+  height: 100%;
   width: 100%;
-  height: 53px;
-  line-height: 53px;
-  font-weight: 900;
-  padding: 0 1rem;
-  color: #ffffff;
   background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
   border-bottom: 2px solid #372c36;
-  float: left;
-  cursor: pointer;
+
+  & span {
+    flex: 1;
+    margin-left: 15px;
+    .font-m2;
+    .raleway-medium;
+  }
 }
 
 /* line 19, ../tests/sass/components/_header.scss */
@@ -131,9 +171,9 @@ body {
   display: inline-block;
   padding: 0 .5rem 0 1.5rem;
   color: #555459;
-  font-size: 1.4rem;
+  font-size: 1.5em;
   font-weight: 900;
-  line-height: 53px;
+  line-height: 50px;
   cursor: pointer;
   text-align: left;
   float: right;
@@ -148,20 +188,29 @@ body {
 
 /* line 1, ../tests/sass/components/_main.scss */
 .listings {
-  height: 90%;
-  /*width: 220px;*/
-  /*float: left;*/
-  color: #ab9ba9;
+  height: ~"calc(100% - 100px)";
+
+  width: 220px;
+
+  .font-s2;
+  .raleway-light;
+  font-weight: 200;
+
+  /*color: #ab9ba9;*/
+  color: #fff;
   /*background-color: #4d394b;*/
   overflow-y: auto;
   overflow-x: hidden;
+
+  
 }
 
 /* line 11, ../tests/sass/components/_main.scss */
 .message-history {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 85%;
+  margin-top: 48px;
+  height: auto;
   padding: 0 18px 1rem 1.5rem;
 }
 
@@ -176,40 +225,49 @@ body {
   font-size: .8rem;
   line-height: 1.25rem;
   /*margin: 1rem 1rem .1rem;*/
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #ab9ba9;
-  width: 165px;
   position: relative;
+}
+
+#create-channel {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 /* line 20, ../tests/sass/components/_listings.scss */
 .channel_list {
   list-style-type: none;
   font-size: 1.5em;
-  color: #ab9ba9;
+  /*color: #ab9ba9;*/
   width: 100%;
 }
 
 /* line 26, ../tests/sass/components/_listings.scss */
 .channel {
-  height: 30px;
-  line-height: 30px;
-  -moz-border-radius-topright: 0.25rem;
+  height: 45px;
+  line-height: 45px;
+/*  -moz-border-radius-topright: 0.25rem;
   -webkit-border-top-right-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   -moz-border-radius-bottomright: 0.25rem;
   -webkit-border-bottom-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  margin-right: 17px;
+  border-bottom-right-radius: 0.25rem;*/
+  /*margin-right: 17px;*/
   color: #ffffff;
   padding-left: 1rem;
 }
 
 .channel p {
-  padding-top: 4px;
-  font-size: 1.2em;
+  line-height: 45px;
+  margin-left: 20px;
+  font-size: 20px;
   text-align: left;
+  color: inherit;
 }
 
 /* line 35, ../tests/sass/components/_listings.scss */
@@ -217,26 +275,40 @@ body {
   color: #ffffff;
   background: #eb4d5c;
   border-radius: 10px;
-  padding: 5px 9px;
-  font-size: .9rem;
-  line-height: 14px;
+  padding: 9px;
+  font-size: 1.2rem;
+  line-height: 20px;
   font-weight: 700;
-  vertical-align: baseline;
+  vertical-align: middle;
   white-space: nowrap;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   float: right;
-  margin-right: 3px;
-  margin-top: 3px;
+  margin: 3px;
 }
 
 /* line 51, ../tests/sass/components/_listings.scss */
 .channel.active {
-  background: rgba(0, 0, 0, 0.31) none repeat scroll 0% 0%;
+  /*background: rgba(255, 255, 255, 0.31) none repeat scroll 0% 0%;*/
+  background: -webkit-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1));
+  background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1));
+  background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,255,255,1));
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,255,255,1));
+  color: #2f2847;
 }
 
 /* line 55, ../tests/sass/components/_listings.scss */
 .channel_prefix {
-  color: #b2d5c9;
+  color: inherit;
+}
+
+.channel_name {
+  flex: 1;
+  display: flex;
+  color: inherit;
+
+  -webkit-justify-content: space-between; /* Safari */
+  justify-content:         space-between;
+  /*text-decoration: none;*/
 }
 
 /* line 59, ../tests/sass/components/_listings.scss */
@@ -306,15 +378,11 @@ body {
 .user-menu {
   float: left;
   width: 100%;
-  height: 5%;
+  height: auto;
   cursor: pointer;
-  background: rgba(22, 34, 54, 0.66) none repeat scroll 0% 0%;
+  background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
   border-top: 2px solid #372c36;
-  padding: 7px 0 9px 8px;
-  height: 4rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  /*padding: 7px 0 9px 8px;*/
 }
 
 /* line 18, ../tests/sass/components/_user-menu.scss */
@@ -338,7 +406,8 @@ body {
   font-weight: 900;
   line-height: 1.5rem;
   margin-top: .2rem;
-  max-width: 120px;
+  max-width: 220px;
+  text-align: left;
 }
 
 /* line 38, ../tests/sass/components/_user-menu.scss */
@@ -351,7 +420,6 @@ body {
 .connection_icon {
   width: 12px;
   height: 12px;
-  margin-left: 10px;
 }
 
 /* line 43, ../tests/sass/components/_user-menu.scss */
@@ -362,7 +430,15 @@ body {
 
 /* line 1, ../tests/sass/components/_input-box.scss */
 .input-box {
+  flex: 1;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+
+  padding: 0;
   height: 44px;
+  max-height: 44px;
   line-height: 1.2rem;
   border: 2px solid #e0e0e0;
   -moz-border-radius: 0.2rem;
@@ -372,21 +448,90 @@ body {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  background-color: transparent;
   color: #3d3c40;
   /*padding: 9px 5px 9px 8px;*/
-  margin: 10px 25px 55px 25px;
-  margin-bottom: auto;
+  margin: 0px 25px 15px 25px;
   width: auto;
+
+  bottom: 0;
+}
+
+.input-box .fa-paper-plane {
+  position: relative;
+  right: 12px;
+  top: 12px;
 }
 
 /* line 6, ../tests/sass/components/_input-box.scss */
 .input-box_text {
-  margin-top: -10px;
+  width: 90%;
+  padding: 0;
 }
 
-.channel_name {
-  flex: 1;
-  display: flex;
-  text-decoration: none;
-  color: inherit;
+
+
+// login
+.login-page {
+  height: 100%;
+  width: 100%;
+
+  .raleway-regular;
+  .font-s3;
+
+  background-color: #332947
+}
+
+.login-title {
+  .login-page-flex-layout;
+  
+  height: 40%;
+
+  & p {
+    color: #fff;
+    .font-l3;
+    .type-black;
+  }
+}
+
+.login-form {
+  .login-page-flex-layout;
+
+  width: 100%;
+  height: 60%;
+
+  color: #fff;
+
+  & .login-input {
+    opacity: 0.7;
+    padding: 12px 0 12px 0px;
+    width: 280px;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: thin solid #fff;
+    color: #fff;
+  }
+
+  & button {
+    width: 280px;
+    height: 35px;
+
+    color: #fff;
+    opacity: 0.99;
+    background-color: transparent;
+    padding: 3px;
+  }
+
+  & .login-button {
+    background-color: rgba(147, 232, 66, 0.85);
+  }
+
+  & .signup-button {
+    border: transparent;
+  }
+
+  & .facebook-login-button {
+    background: rgba(0, 199, 255, 0.85);
+  }
+
 }

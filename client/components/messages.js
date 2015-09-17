@@ -1,10 +1,14 @@
 Template.messages.onCreated(function() {
-  this.subscribe('messages');
-  this.subscribe('allUsernames');
+	var self = this;
+  self.autorun(function() {
+  	self.subscribe('messages', Session.get('selectedChannel'));
+  	self.subscribe('allUsernames');
+  });
+  
 });
 
 Template.messages.helpers({
   messages: function() {
     return Messages.find();
   }
-})
+});

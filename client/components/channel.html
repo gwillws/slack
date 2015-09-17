@@ -1,13 +1,19 @@
 <template name="channel">
-  <li class="channel active">
-    <a class="channel_name">
-      <span class="unread">
-        0
-      </span>
-      <p>
-        <span class="prefix">#</span>
-        slack
-      </p>
-    </a>
-  </li>
+  {{#if Template.subscriptionsReady}}
+    {{#each channels}}
+      <li class="channel {{active}}">
+        <div class="channel_name">
+          <p>
+            <span class="prefix">#</span>
+            {{channelName}}
+          </p>
+          <span class="unread">
+            0
+          </span>
+        </div>
+      </li>
+    {{/each}}
+  {{else}}
+    Loading...
+  {{/if}}
 </template>

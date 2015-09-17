@@ -43,13 +43,13 @@ Meteor.startup(function () {
 
   // Only show the connection error box if it has been 5 seconds since
   // the app started
-  setTimeout(function () {
-    // Launch screen handle created in lib/router.js
-    dataReadyHold.release();
+  // setTimeout(function () {
+  //   // Launch screen handle created in lib/router.js
+  //   dataReadyHold.release();
 
-    // Allow the connection error box to be shown if there is an issue
-    Session.set(IGNORE_CONNECTION_ISSUE_KEY, false);
-  }, CONNECTION_ISSUE_TIMEOUT);
+  //   // Allow the connection error box to be shown if there is an issue
+  //   Session.set(IGNORE_CONNECTION_ISSUE_KEY, false);
+  // }, CONNECTION_ISSUE_TIMEOUT);
 });
 
 Template.appBody.onRendered(function() {
@@ -88,25 +88,6 @@ Template.appBody.onRendered(function() {
     }
   };
 
-  this.find(".notifications")._uihooks = {
-    insertElement: function(node, next) {
-      $(node)
-      .insertBefore(next)
-      .velocity("slideDown", { 
-        duration: ANIMATION_DURATION, 
-        easing: [0.175, 0.885, 0.335, 1.05]
-      });
-    },
-    removeElement: function(node) {
-      $(node)
-      .velocity("fadeOut", {
-        duration: ANIMATION_DURATION,
-        complete: function() {
-          $(node).remove();
-        }
-      });
-    }
-  };
 });
 
 
@@ -158,10 +139,10 @@ Template.appBody.events({
     event.preventDefault();
   },
 
-  'click #menu a': function(event) {
-    nextInitiator = 'menu'
-    Session.set(MENU_KEY, false);
-  },
+  // 'click #menu a': function(event) {
+  //   nextInitiator = 'menu'
+  //   Session.set(MENU_KEY, false);
+  // },
   
   'click .js-notification-action': function() {
     if (_.isFunction(this.callback)) {

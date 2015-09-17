@@ -2,7 +2,7 @@ nav {
   .position(absolute, 0, 0, auto, 0, 100%, 3em);
   .transform(translate3d(0,0,0));
   .transition( all 200ms ease-out );
-  background: rgba(255,255,255,.97);
+  background: rgba(255,255,255,0);
   text-align: center;
   z-index: 10;
 
@@ -32,13 +32,16 @@ nav {
   }
 
   .title-page {
-    .font-s2-alt;
-    .type-secondary;
-    .title-caps;
-    .ellipsized;
+    .font-m2;
+    .raleway-medium;
+    /*.title-caps;
+    .ellipsized;*/
     .position(absolute, 50%, 0, auto, 0);
     .transform(translate3d(0, -40%, 0));
     line-height: 1;
+
+    text-align: left;
+    margin-left: 50px;
 
     .subtext-page {
       .font-s1;
